@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form>
+            <div class="form-group">
+                <label for="newUsername">Create Username (at least 6 characters, alphanumeric only):</label>
+                <input type="text" id="newUsername" name="newUsername" pattern="[a-zA-Z0-9]{6,}" 
+                title="At least 6 alphanumeric characters" placeholder="Enter a username" required>
+            </div>
+            <div class="form-group">
+                <label for="newPassword">Create Password:</label>
+                <input type="password" id="newPassword" name="newPassword" placeholder="Enter a password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Retype Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Retype your password" required>
+            </div>
+            <div class="form-group">
+                <label for="securityOption">Security Option:</label>
+                <select id="securityOption" name="securityOption" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="middleName">What is your middle name?</option>
+                    <option value="firstLove">Who is your first love?</option>
+                    <option value="dreamCar">What is your dream car?</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="securityAnswer">Answer:</label>
+                <input type="text" id="securityAnswer" name="securityAnswer" placeholder="Enter your answer" required>
+            </div>
+            <div class="form-group">
+                <label for="securityCode">Type your security code (4-6 digits):</label>
+                <input type="password" id="securityCode" name="securityCode" pattern="\d{4,6}" 
+                title="Must be 4-6 digits" placeholder="Enter a security code" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmSecurityCode">Retype Security Code:</label>
+                <input type="password" id="confirmSecurityCode" name="confirmSecurityCode" 
+                pattern="\d{4,6}" title="Must match the above security code" placeholder="Retype your security code" required>
+            </div>
+            <div class="form-group">
+                <label for="referralUsername">Referral/Sponsor Username:</label>
+                <input type="text" id="referralUsername" name="referralUsername" placeholder="Referral username">
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
